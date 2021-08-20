@@ -291,7 +291,8 @@ section .title::after {
   background: #222;
   text-align: center;
   border-radius: 6px;
-  padding: 50px 25px;
+  padding: 50px 15px;
+  padding-bottom: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   /* cj. added margin here for row gap */
@@ -303,9 +304,33 @@ section .title::after {
 .services .serv-content .card .box {
   transition: all 0.3s ease;
 }
+
+.social-logins-container {
+  display: flex;
+  max-width: 200px;
+  margin-top: 0.8rem;
+}
+
+.social-logins-container i {
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin: 5px;
+}
+
+/* .cj added btn style */
+.services .serv-content .card .box .btn {
+  display: block;
+  background-color: white;
+  color: #222;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
 .services .serv-content .card:hover .box {
   transform: scale(1.05);
 }
+
 .services .serv-content .card i {
   font-size: 50px;
   color: crimson;
@@ -327,6 +352,11 @@ section .title::after {
   margin: 0 auto;
   padding: 100px 0;
 }
+
+/* color changed */
+#projects .projects-header .title span {
+  color: red;
+}
 #projects .projects-header h1 {
   margin-bottom: 50px;
 }
@@ -336,17 +366,26 @@ section .title::after {
   justify-content: center;
   flex-direction: column;
 }
+
 #projects .project-item {
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin: 20px auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  height: 400px;
+}
+
+/* cj. alternative direction */
+#projects .all-projects > :nth-child(even) {
+  flex-direction: row-reverse;
 }
 #projects .project-info {
+  font-family: "Poppins", sans-serif;
   padding: 30px;
   flex-basis: 50%;
   height: 100%;
@@ -358,21 +397,22 @@ section .title::after {
   color: white;
 }
 #projects .project-info h1 {
-  font-size: 4rem;
-  font-weight: 500;
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 #projects .project-info h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 10px 0px;
 }
 #projects .project-info p {
-  color: white;
+  color: rgba(255, 255, 255, 0.925);
 }
 #projects .project-img {
   flex-basis: 50%;
-  height: 300px;
+  height: fit-content;
   overflow: hidden;
+  object-fit: fill;
   position: relative;
 }
 #projects .project-img:after {
