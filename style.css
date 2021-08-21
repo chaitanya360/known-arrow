@@ -181,6 +181,7 @@ section .title::after {
   background-size: cover;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
+  flex-direction: column;
 }
 .home .max-width {
   width: 100%;
@@ -217,6 +218,23 @@ section .title::after {
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
+
+#home .social-login-container {
+  width: fit-content;
+  margin: auto;
+  margin-top: 5rem;
+}
+#home .social-login-container i {
+  font-size: 3rem;
+  margin: 1rem;
+  transition: transform 200ms linear;
+  cursor: pointer;
+}
+
+#home .social-login-container i:hover {
+  transform: scale(1.2);
+}
+
 .home .home-content a:hover {
   color: crimson;
   background: none;
@@ -326,6 +344,12 @@ section .title::after {
   margin: 1rem auto;
   padding: 5px 10px;
   border-radius: 3px;
+  transition: background-color 200ms linear;
+}
+
+.services .serv-content .card .box .btn:hover {
+  background-color: #222;
+  color: white;
 }
 .services .serv-content .card:hover .box {
   transform: scale(1.05);
